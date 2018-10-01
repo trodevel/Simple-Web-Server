@@ -203,7 +203,7 @@ namespace SimpleWeb {
       /// The time point when the request header was fully read.
       std::chrono::system_clock::time_point header_read_time;
 
-      std::string remote_endpoint_address() noexcept {
+      std::string remote_endpoint_address() const noexcept {
         try {
           return remote_endpoint->address().to_string();
         }
@@ -212,7 +212,7 @@ namespace SimpleWeb {
         }
       }
 
-      unsigned short remote_endpoint_port() noexcept {
+      unsigned short remote_endpoint_port() const noexcept {
         return remote_endpoint->port();
       }
 
